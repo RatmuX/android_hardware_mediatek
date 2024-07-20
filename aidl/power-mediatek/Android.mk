@@ -1,3 +1,5 @@
+ifneq ($(TARGET_PROVIDES_MTK_POWER_SERVICE_LIB),true)
+
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -23,3 +25,5 @@ ifneq ($(TARGET_POWERHAL_MODE_EXT),)
 endif
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif # TARGET_PROVIDES_MTK_POWER_SERVICE_LIB
